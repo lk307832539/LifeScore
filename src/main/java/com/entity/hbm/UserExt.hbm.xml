@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.UserExt" table="user_ext" schema="lifescore">
+        <id name="userExtId">
+            <column name="user_ext_id" sql-type="int(11)"/>
+        </id>
+        <property name="userId">
+            <column name="user_id" sql-type="int(11)"/>
+        </property>
+        <property name="userImg">
+            <column name="user_img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="nickName">
+            <column name="nick_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="realName">
+            <column name="real_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="birthday">
+            <column name="birthday" sql-type="date" not-null="true"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="wechat">
+            <column name="wechat" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="qq">
+            <column name="qq" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="profession">
+            <column name="profession" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="intro">
+            <column name="intro" sql-type="text" not-null="true"/>
+        </property>
+        <many-to-one name="userByUserId" class="com.entity.User">
+            <column name="user_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

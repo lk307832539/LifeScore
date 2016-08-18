@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.ProductType" table="product_type" schema="lifescore">
+        <id name="productTypeId">
+            <column name="product_type_id" sql-type="int(11)"/>
+        </id>
+        <property name="productTypeName">
+            <column name="product_type_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="productTypeDescription">
+            <column name="product_type_description" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="productTypeImg">
+            <column name="product_type_img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <many-to-one name="userByUserId" class="com.entity.User">
+            <column name="user_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.ExchangeItem" table="exchange_item" schema="lifescore">
+        <id name="exchangeItemId">
+            <column name="exchange_item_id" sql-type="int(11)"/>
+        </id>
+        <property name="exchangeProductId">
+            <column name="exchange_product_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="exchangeUserId">
+            <column name="exchange_user_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="exchangeTime">
+            <column name="exchange_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <many-to-one name="productByExchangeProductId" class="com.entity.Product">
+            <column name="exchange_product_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="userByExchangeUserId" class="com.entity.User">
+            <column name="exchange_user_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
