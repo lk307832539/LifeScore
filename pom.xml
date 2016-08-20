@@ -12,15 +12,16 @@
 
     <build>
         <finalName>testweb</finalName>
+
         <!--配置Maven 对resource文件 过滤 -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>**/*.properties</exclude>
-                    <exclude>**/*.xml</exclude>
-                </excludes>
-                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
             </resource>
             <resource>
                 <directory>src/main/java</directory>
@@ -28,10 +29,11 @@
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
-                <filtering>false</filtering>
+                <filtering>true</filtering>
             </resource>
         </resources>
     </build>
+
 
     <properties>
         <!-- base setting -->
@@ -149,11 +151,13 @@
         </dependency>
 
         <!-- log start -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -248,7 +252,11 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.4</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.2.RELEASE</version>
+        </dependency>
 
     </dependencies>
 </project>
