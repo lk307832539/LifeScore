@@ -25,23 +25,23 @@
 
         <!-- =============== 数据库表结构更新设置 =================== -->
         <property name="hbm2ddl.auto">update</property>
-        <mapping resource="com/entity/hbm/DayScoreLog.hbm.xml"/>
+        <mapping resource="config/hbm/DayScoreLog.hbm.xml"/>
         <mapping class="com.entity.DayScoreLog"/>
-        <mapping resource="com/entity/hbm/ExchangeItem.hbm.xml"/>
+        <mapping resource="config/hbm/ExchangeItem.hbm.xml"/>
         <mapping class="com.entity.ExchangeItem"/>
-        <mapping resource="com/entity/hbm/Product.hbm.xml"/>
+        <mapping resource="config/hbm/Product.hbm.xml"/>
         <mapping class="com.entity.Product"/>
-        <mapping resource="com/entity/hbm/ProductType.hbm.xml"/>
+        <mapping resource="config/hbm/ProductType.hbm.xml"/>
         <mapping class="com.entity.ProductType"/>
         <mapping class="com.entity.Task"/>
-        <mapping resource="com/entity/hbm/Task.hbm.xml"/>
-        <mapping resource="com/entity/hbm/TaskItem.hbm.xml"/>
+        <mapping resource="config/hbm/Task.hbm.xml"/>
+        <mapping resource="config/hbm/TaskItem.hbm.xml"/>
         <mapping class="com.entity.TaskItem"/>
-        <mapping resource="com/entity/hbm/TaskType.hbm.xml"/>
+        <mapping resource="config/hbm/TaskType.hbm.xml"/>
         <mapping class="com.entity.TaskType"/>
         <mapping class="com.entity.User"/>
-        <mapping resource="com/entity/hbm/User.hbm.xml"/>
-        <mapping resource="com/entity/hbm/UserExt.hbm.xml"/>
+        <mapping resource="config/hbm/User.hbm.xml"/>
+        <mapping resource="config/hbm/UserExt.hbm.xml"/>
         <mapping class="com.entity.UserExt"/>
 
         <!-- =============== 实体关系列表 =================== -->
