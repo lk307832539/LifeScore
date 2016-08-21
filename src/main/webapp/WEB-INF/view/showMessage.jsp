@@ -12,7 +12,7 @@
 </head>
 <body>
 <c:forEach items="${list}" var="user">
-    <div>${user.id}&${user.userName}&${user.password}</div>
+    <div>${user.userId}&${user.userName}&${user.password}</div>
 </c:forEach>
 </body>
 </html>
