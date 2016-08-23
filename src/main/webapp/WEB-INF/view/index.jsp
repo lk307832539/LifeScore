@@ -33,14 +33,14 @@
             <!--Navbar Brand-->
             <a class="navbar-brand" href="#" target="_blank">小小康小小云</a>
             <!--Links-->
-            <ul class="nav navbar-nav">
-                <%--<li class="nav-item active">--%>
-                    <%--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link" href="#">Features</a>--%>
-                <%----%>
-            </ul>
+           <%-- <ul class="nav navbar-nav">
+                &lt;%&ndash;<li class="nav-item active">&ndash;%&gt;
+                    &lt;%&ndash;<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>&ndash;%&gt;
+                &lt;%&ndash;</li>&ndash;%&gt;
+                &lt;%&ndash;<li class="nav-item">&ndash;%&gt;
+                    &lt;%&ndash;<a class="nav-link" href="#">Features</a>&ndash;%&gt;
+                &lt;%&ndash;&ndash;%&gt;
+            </ul>--%>
             <!--Search form-->
            <%-- <form class="form-inline">
                 <input class="form-control" type="text" placeholder="Search">
@@ -62,7 +62,7 @@
             </li>
             <li>
                 <a target="_blank" href="" class="btn btn-primary btn-lg">登录</a>
-                <a target="_blank" href="showMessage.do" class="btn btn-primary btn-lg">测试</a>
+                <a target="_blank" href="getTaskList.do" class="btn btn-primary btn-lg">测试</a>
             </li>
         </ul>
     </div>

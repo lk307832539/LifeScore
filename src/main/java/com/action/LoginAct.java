@@ -20,26 +20,26 @@ public class LoginAct {
     @Resource
     private UserMng userMng;
 
-    @RequestMapping(value = "/logingoto.do")
+    @RequestMapping(value = "/logingoto")
     public String login(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
         return "login";
     }
 
-    @RequestMapping(value = "/login.do")
+    @RequestMapping(value = "/login")
     public String login(String username, String password, HttpServletRequest request, HttpServletResponse response,
                         ModelMap model) {
 
         return "login";
     }
 
-    @RequestMapping(value = "/simpleRegist.do")
+    @RequestMapping(value = "/simpleRegist")
     public String simpleRegist(String username, String email, String password, String repassword,
                                HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 
         return "login";
     }
 
-    @RequestMapping(value = "/loginout.do")
+    @RequestMapping(value = "/loginout")
     public String loginOut(SessionStatus sessionStatus, HttpSession session) {
         sessionStatus.setComplete();// 将所有的会话注销
         session.removeAttribute("user");

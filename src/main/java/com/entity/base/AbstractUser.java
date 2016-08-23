@@ -1,5 +1,9 @@
 package com.entity.base;
 
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
