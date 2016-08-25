@@ -11,11 +11,15 @@
     <mvc:annotation-driven/>
     <!--配置自动扫描包-->
     <context:component-scan base-package="com"/>
-    <!--配置视图解析器-->
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/view/"></property>
-        <property name="suffix" value=".jsp"></property>
+
+    <!--视图解释器 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix">
+            <value>.html</value>
+        </property>
+        <property name="contentType" value="text/html;charset=UTF-8"></property>
     </bean>
+
     <!-- 配置JSON视图 -->
     <bean
             class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">

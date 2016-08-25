@@ -34,7 +34,6 @@
         </resources>
     </build>
 
-
     <properties>
         <!-- base setting -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -122,7 +121,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.2.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- springframe end -->
 
@@ -247,11 +246,14 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.4</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.3.2.RELEASE</version>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.25-incubating</version>
         </dependency>
+
 
     </dependencies>
 </project>
