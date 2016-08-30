@@ -5,6 +5,7 @@ import com.service.UserMng;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import javax.annotation.Resource;
@@ -15,6 +16,8 @@ import javax.servlet.http.HttpSession;
 /**
  * Created by LK on 2016/8/21.
  */
+// 将user的值存到session中
+@SessionAttributes("user")
 @Controller
 public class LoginAct {
     @Resource
@@ -26,10 +29,16 @@ public class LoginAct {
     }
 
     @RequestMapping(value = "/login")
-    public String login(String username, String password, HttpServletRequest request, HttpServletResponse response,
+    public String login(String userName, String password, HttpServletRequest request, HttpServletResponse response,
                         ModelMap model) {
+        User user = this.userMng.getUserByUserName(userName);
+        if(user!=null){
+            if(user.getPassword().equals(password)){
+                model.addAttribute("user",user);
+            }
+        }
 
-        return "login";
+        return "index";
     }
 
     @RequestMapping(value = "/simpleRegist")

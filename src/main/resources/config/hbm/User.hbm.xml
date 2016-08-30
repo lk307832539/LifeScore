@@ -8,7 +8,7 @@
     <class name="com.entity.User" table="user" catalog="lifescore">
         <id name="userId" type="java.lang.Integer">
             <column name="user_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <property name="userName" type="java.lang.String">
             <column name="user_name">
@@ -70,17 +70,11 @@
                 <comment>积分</comment>
             </column>
         </property>
-        <set name="productTypes" inverse="true">
+        <set name="exchangeItems" inverse="true">
             <key>
-                <column name="user_id" />
+                <column name="exchange_user_id" />
             </key>
-            <one-to-many class="com.entity.ProductType" />
-        </set>
-        <set name="taskTypes" inverse="true">
-            <key>
-                <column name="user_id" not-null="true" />
-            </key>
-            <one-to-many class="com.entity.TaskType" />
+            <one-to-many class="com.entity.ExchangeItem" />
         </set>
         <set name="dayScoreLogs" inverse="true">
             <key>
@@ -88,35 +82,23 @@
             </key>
             <one-to-many class="com.entity.DayScoreLog" />
         </set>
+        <set name="taskTypes" inverse="true">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="com.entity.TaskType" />
+        </set>
         <set name="tasks" inverse="true">
             <key>
                 <column name="task_user_id" not-null="true" />
             </key>
             <one-to-many class="com.entity.Task" />
         </set>
-        <set name="exchangeItems" inverse="true">
-            <key>
-                <column name="exchange_user_id" />
-            </key>
-            <one-to-many class="com.entity.ExchangeItem" />
-        </set>
-        <set name="productTypes_1" inverse="true">
+        <set name="productTypes" inverse="true">
             <key>
                 <column name="user_id" />
             </key>
             <one-to-many class="com.entity.ProductType" />
-        </set>
-        <set name="tasks_1" inverse="true">
-            <key>
-                <column name="task_user_id" not-null="true" />
-            </key>
-            <one-to-many class="com.entity.Task" />
-        </set>
-        <set name="exchangeItems_1" inverse="true">
-            <key>
-                <column name="exchange_user_id" />
-            </key>
-            <one-to-many class="com.entity.ExchangeItem" />
         </set>
         <set name="userExts" inverse="true">
             <key>
@@ -124,31 +106,7 @@
             </key>
             <one-to-many class="com.entity.UserExt" />
         </set>
-        <set name="dayScoreLogs_1" inverse="true">
-            <key>
-                <column name="user_id" not-null="true" />
-            </key>
-            <one-to-many class="com.entity.DayScoreLog" />
-        </set>
-        <set name="taskTypes_1" inverse="true">
-            <key>
-                <column name="user_id" not-null="true" />
-            </key>
-            <one-to-many class="com.entity.TaskType" />
-        </set>
         <set name="products" inverse="true">
-            <key>
-                <column name="user_id" />
-            </key>
-            <one-to-many class="com.entity.Product" />
-        </set>
-        <set name="userExts_1" inverse="true">
-            <key>
-                <column name="user_id" not-null="true" />
-            </key>
-            <one-to-many class="com.entity.UserExt" />
-        </set>
-        <set name="products_1" inverse="true">
             <key>
                 <column name="user_id" />
             </key>

@@ -17,15 +17,15 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="config:hibernate.cfg.xml" />
-          <unit-entry name="sessionFactory" />
+          <unit-entry name="config:hibernate.cfg.xml" value="25442bc2-db1f-48ed-8d80-fb6c1417ce4e" />
+          <unit-entry name="sessionFactory" value="25442bc2-db1f-48ed-8d80-fb6c1417ce4e" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/config/hibernate.cfg.xml" />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">

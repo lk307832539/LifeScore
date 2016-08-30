@@ -8,7 +8,7 @@
     <class name="com.entity.TaskItem" table="task_item" catalog="lifescore">
         <id name="taskItemId" type="java.lang.Integer">
             <column name="task_item_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <many-to-one name="task" class="com.entity.Task" fetch="select">
             <column name="task_id" not-null="true" />

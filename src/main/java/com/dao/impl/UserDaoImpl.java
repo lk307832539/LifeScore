@@ -30,4 +30,12 @@ public class UserDaoImpl implements UserDao {
         query.setInteger(0,id);
         return (User) query.uniqueResult();
     }
+
+    @Override
+    public User getUserByUserName(String userName) {
+        String hql = "from User u where u.userName =?";
+        Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
+        query.setString(0, userName);
+        return (User) query.uniqueResult();
+    }
 }

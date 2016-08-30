@@ -30,20 +30,10 @@
         <!--Collapse content-->
         <div class="collapse navbar-toggleable-xs" id="collapseEx">
             <!--Navbar Brand-->
-            <a class="navbar-brand" href="#" target="_blank">小小康小小云</a>
-           <!-- &lt;!&ndash;Links&ndash;&gt;
-             <ul class="nav navbar-nav">
-                &lt;%&ndash;<li class="nav-item active">&ndash;%&gt;
-                    &lt;%&ndash;<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>&ndash;%&gt;
-                &lt;%&ndash;</li>&ndash;%&gt;
-                &lt;%&ndash;<li class="nav-item">&ndash;%&gt;
-                    &lt;%&ndash;<a class="nav-link" href="#">Features</a>&ndash;%&gt;
-                &lt;%&ndash;&ndash;%&gt;
-            </ul>
-            &lt;!&ndash;Search form&ndash;&gt;
-           <form class="form-inline">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>-->
+            <a class="navbar-brand" href="javascript:void(0)" target="_blank">小小康小小云</a>
+            <div style="float: right;">
+                <button class="btn btn-default-outline waves-effect" type="button" data-toggle="modal" data-target="#modal-login">登录/注册</button>
+            </div>
         </div>
         <!--/.Collapse content-->
     </div>
@@ -66,5 +56,69 @@
         </ul>
     </div>
 </div>
+
+<!-- Modal Login -->
+<div class="modal fade modal-ext" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3><i class="fa fa-user"></i>登录</h3>
+            </div>
+
+            <script>
+                function login() {
+                    var userName = $("#form2");
+                    if ($.trim(userName.val()) == '') {
+                        alert("请填写用户名");
+                        return false;
+                    }
+                    var password = $("#form3");
+                    if($.trim(password.val())==''){
+                        alert("请输入密码");
+                        return false;
+                    }
+                    $("#loginForm").submit();
+                }
+            </script>
+            <!--Body-->
+            <form action="login.do" method="post" id="loginForm">
+                <div class="modal-body">
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="text" id="form2" class="form-control" name="userName">
+                        <label for="form2">用户名</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-lock prefix"></i>
+                        <input type="password" id="form3" class="form-control" name="password">
+                        <label for="form3">密码</label>
+                    </div>
+                    <div class="text-xs-center">
+                        <button class="btn btn-primary btn-lg" type="button" onclick="login();">Login</button>
+                    </div>
+                </div>
+            </form>
+
+            <!--Footer-->
+            <div class="modal-footer">
+                <div class="options">
+                    <p>没有帐号。。=。=? <a href="#">注册没开放</a></p>
+                    <p>忘记 <a href="#">密码?</a></p>
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+
 </body>
 </html>

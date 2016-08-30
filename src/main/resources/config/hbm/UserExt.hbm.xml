@@ -8,7 +8,7 @@
     <class name="com.entity.UserExt" table="user_ext" catalog="lifescore">
         <id name="userExtId" type="java.lang.Integer">
             <column name="user_ext_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <many-to-one name="user" class="com.entity.User" fetch="select">
             <column name="user_id" not-null="true" />

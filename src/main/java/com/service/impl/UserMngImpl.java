@@ -27,4 +27,10 @@ public class UserMngImpl implements UserMng {
         User user = this.userDao.getUserById(id);
         return user;
     }
+
+    @Override
+    public User getUserByUserName(String userName) {
+        User user = this.userDao.getUserByUserName(userName);
+        return user;
+    }
 }

@@ -8,7 +8,7 @@
     <class name="com.entity.ExchangeItem" table="exchange_item" catalog="lifescore">
         <id name="exchangeItemId" type="java.lang.Integer">
             <column name="exchange_item_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <many-to-one name="product" class="com.entity.Product" fetch="select">
             <column name="exchange_product_id" />

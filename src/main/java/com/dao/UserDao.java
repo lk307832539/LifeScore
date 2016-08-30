@@ -11,4 +11,6 @@ public abstract interface UserDao {
     public List<User> getAllUser();
 
     public User getUserById(Integer id);
+
+    public User getUserByUserName(String userName);
 }

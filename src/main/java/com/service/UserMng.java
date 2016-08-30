@@ -12,4 +12,6 @@ public abstract interface UserMng {
     public List<User> getAllUser();
 
     public User getUserById(Integer id);
+
+    public User getUserByUserName(String userName);
 }

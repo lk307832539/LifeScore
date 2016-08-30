@@ -8,7 +8,7 @@
     <class name="com.entity.Product" table="product" catalog="lifescore">
         <id name="productId" type="java.lang.Integer">
             <column name="product_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <many-to-one name="user" class="com.entity.User" fetch="select">
             <column name="user_id" />
@@ -44,12 +44,6 @@
             </column>
         </property>
         <set name="exchangeItems" inverse="true">
-            <key>
-                <column name="exchange_product_id" />
-            </key>
-            <one-to-many class="com.entity.ExchangeItem" />
-        </set>
-        <set name="exchangeItems_1" inverse="true">
             <key>
                 <column name="exchange_product_id" />
             </key>

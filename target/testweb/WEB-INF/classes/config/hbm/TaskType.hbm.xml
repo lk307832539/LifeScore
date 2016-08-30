@@ -8,7 +8,7 @@
     <class name="com.entity.TaskType" table="task_type" catalog="lifescore">
         <id name="taskTypeId" type="java.lang.Integer">
             <column name="task_type_id" />
-            <generator class="native" />
+            <generator class="identity" />
         </id>
         <many-to-one name="user" class="com.entity.User" fetch="select">
             <column name="user_id" not-null="true" />
@@ -39,14 +39,6 @@
             </column>
         </property>
         <set name="tasks" inverse="true">
-            <key>
-                <column name="task_type_id" not-null="true">
-                    <comment>任务类型</comment>
-                </column>
-            </key>
-            <one-to-many class="com.entity.Task" />
-        </set>
-        <set name="tasks_1" inverse="true">
             <key>
                 <column name="task_type_id" not-null="true">
                     <comment>任务类型</comment>
