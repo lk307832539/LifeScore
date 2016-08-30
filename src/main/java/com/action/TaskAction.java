@@ -23,7 +23,7 @@ public class TaskAction {
     @RequestMapping("getTaskList")
     public String getTaskList(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 
-//        User user = request.getSession().getAttribute();
+        User user = (User) request.getSession().getAttribute("user");
         List<Task> list = this.taskMng.getAllTask();
         return "/taskList";
     }

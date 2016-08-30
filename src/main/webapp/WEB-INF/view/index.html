@@ -32,7 +32,11 @@
             <!--Navbar Brand-->
             <a class="navbar-brand" href="javascript:void(0)" target="_blank">小小康小小云</a>
             <div style="float: right;">
+                [#if user??]
+                ${user.userName}
+                [#else]
                 <button class="btn btn-default-outline waves-effect" type="button" data-toggle="modal" data-target="#modal-login">登录/注册</button>
+                [/#if]
             </div>
         </div>
         <!--/.Collapse content-->
@@ -50,8 +54,7 @@
                 <p>内部使用。。。！=。=！</p>
             </li>
             <li>
-                <a target="_blank" href="" class="btn btn-primary btn-lg">登录</a>
-                <a target="_blank" href="getTaskList.do" class="btn btn-primary btn-lg">测试</a>
+                <a target="_blank" href="getTaskList.do" class="btn btn-primary btn-lg">任务列表</a>
             </li>
         </ul>
     </div>
