@@ -23,15 +23,10 @@ public class LoginAct {
     @Resource
     private UserMng userMng;
 
-    @RequestMapping(value = "/logingoto")
-    public String login(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-        return "login";
-    }
-
     @RequestMapping(value = "/login")
-    public String login(String userName, String password, HttpServletRequest request, HttpServletResponse response,
+    public String login(String username, String password, HttpServletRequest request, HttpServletResponse response,
                         ModelMap model) {
-        User user = this.userMng.getUserByUserName(userName);
+        User user = this.userMng.getUserByUserName(username);
         if(user!=null){
             if(user.getPassword().equals(password)){
                 model.addAttribute("user",user);

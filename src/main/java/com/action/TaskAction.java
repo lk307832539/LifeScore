@@ -24,6 +24,9 @@ public class TaskAction {
     public String getTaskList(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 
         User user = (User) request.getSession().getAttribute("user");
+        if (user==null){
+            return "/index";
+        }
         List<Task> list = this.taskMng.getAllTask();
         return "/taskList";
     }

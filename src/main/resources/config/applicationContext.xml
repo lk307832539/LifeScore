@@ -11,7 +11,6 @@
     <mvc:annotation-driven/>
     <!--配置自动扫描包-->
     <context:component-scan base-package="com"/>
-
     <!-- Freemarker配置 -->
     <bean id="freemarkerConfig"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
@@ -27,7 +26,6 @@
                 <prop key="number_format">0.####</prop>
                 <prop key="boolean_format">true,false</prop>
                 <prop key="whitespace_stripping">true</prop>
-                <prop key="tag_syntax">auto_detect</prop>
                 <prop key="url_escaping_charset">UTF-8</prop>
             </props>
         </property>
@@ -68,6 +66,13 @@
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 缓存 -->
+    <bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile">
+            <value>classpath:ehcache-shiro.xml</value>
+        </property>
     </bean>
 
     <!-- 配置上传文件 -->

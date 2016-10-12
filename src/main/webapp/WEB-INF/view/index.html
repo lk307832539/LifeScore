@@ -12,9 +12,6 @@
     <link href="source/css/indexstyle.css" rel="stylesheet">
 
     <script type="text/javascript" src="source/MDB/js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="source/MDB/js/tether.min.js"></script>
-    <script type="text/javascript" src="source/MDB/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="source/MDB/js/mdb.min.js"></script>
 </head>
 <body>
 <!--Navbar-->
@@ -76,8 +73,8 @@
 
             <script>
                 function login() {
-                    var userName = $("#form2");
-                    if ($.trim(userName.val()) == '') {
+                    var username = $("#form2");
+                    if ($.trim(username.val()) == '') {
                         alert("请填写用户名");
                         return false;
                     }
@@ -94,7 +91,7 @@
                 <div class="modal-body">
                     <div class="md-form">
                         <i class="fa fa-envelope prefix"></i>
-                        <input type="text" id="form2" class="form-control" name="userName">
+                        <input type="text" id="form2" class="form-control" name="username">
                         <label for="form2">用户名</label>
                     </div>
 
@@ -122,6 +119,8 @@
     </div>
 </div>
 
-
+<script type="text/javascript" src="source/MDB/js/tether.min.js"></script>
+<script type="text/javascript" src="source/MDB/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="source/MDB/js/mdb.min.js"></script>
 </body>
 </html>
