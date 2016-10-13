@@ -76,7 +76,7 @@ public class CustomAuthorizingRealm extends AuthorizingRealm {
         // 第一步从token中取出用户名
         UsernamePasswordToken authcToken = (UsernamePasswordToken) token;
 
-        User user = userMng.getUserByUserName(authcToken.getUsername());
+        User user = this.userMng.getUserByUserName(authcToken.getUsername());
 
         if (user != null) {
             return new SimpleAuthenticationInfo(user.getUserName(), user.getPassword(), getName());

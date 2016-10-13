@@ -5,6 +5,7 @@ import com.entity.User;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -27,15 +28,15 @@ public class UserDaoImpl implements UserDao {
     public User getUserById(Integer id) {
         String hql = "from User where User.id =?";
         Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
-        query.setInteger(0,id);
+        query.setParameter(0,id);
         return (User) query.uniqueResult();
     }
 
     @Override
     public User getUserByUserName(String userName) {
-        String hql = "from User u where u.userName =?";
+        String hql = "from User u where u.userName =:userName";
         Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
-        query.setString(0, userName);
+        query.setParameter("userName", userName);
         return (User) query.uniqueResult();
     }
 }

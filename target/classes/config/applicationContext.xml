@@ -64,9 +64,11 @@
     </bean>
 
     <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+
+    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
 
     <!-- 配置上传文件 -->
     <bean id="multipartResolver"
@@ -75,5 +77,6 @@
         <property name="maxUploadSize" value="10485760000"></property>
         <property name="maxInMemorySize" value="40960"></property>
     </bean>
+
 
 </beans>
