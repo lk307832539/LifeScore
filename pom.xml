@@ -11,7 +11,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <build>
-        <finalName>testweb</finalName>
+        <finalName>lifescore</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -43,6 +43,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+        <defaultGoal>compile</defaultGoal>
     </build>
 
     <properties>
