@@ -1,7 +1,6 @@
 package test;
 
 import com.dao.UserDao;
-import com.dao.impl.UserDaoImpl;
 import com.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,7 +12,6 @@ import org.junit.Test;
 import javax.annotation.Resource;
 import java.util.List;
 
-import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 
 /**
  * Created by LK on 2016/8/4.
