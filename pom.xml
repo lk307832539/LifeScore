@@ -43,7 +43,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <defaultGoal>install</defaultGoal>
     </build>
 
     <properties>
